@@ -45,7 +45,7 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <Button asChild variant="outline" className="hidden md:flex">
-            <Link href="/login">Sign in</Link>
+            <Link href="/signin">Sign in</Link>
           </Button>
           <Button asChild className="hidden md:flex rounded-button">
             <Link href="/request-demo">Request Demo</Link>

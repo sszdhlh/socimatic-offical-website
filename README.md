@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Socimatic Official Website
 
-## Getting Started
+Welcome to the open-source repository for Socimatic's official website. This platform showcases Socimatic's AI content generation services, designed to assist modern businesses in automating the creation, management, and publication of content.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is built using Next.js to provide an efficient and responsive frontend interface that highlights Socimatic's products and services. Key features of the website include:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **AI Content Generation**: Utilizing advanced AI models to produce high-quality content that aligns with your brand's voice.
+- **Multi-Platform Publishing**: Seamlessly schedule and publish content across various social media platforms from a single dashboard.
+- **Automated Responses**: Engage with your audience 24/7 using AI-driven chat responses.
+- **Analytics and Insights**: Gain comprehensive analytics to help optimize your content strategy.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Intelligent Scheduling**: AI-optimized posting times based on audience engagement patterns.
+- **Audience Management**: Understand and segment your audience to create highly targeted content.
+- **Platform Integration**: Seamless integration with major social media platforms such as Facebook, Instagram, Twitter, and more.
 
-## Learn More
+## Installation and Running
 
-To learn more about Next.js, take a look at the following resources:
+To run this project locally, ensure you have [Node.js](https://nodejs.org/) and npm installed. Then, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/sszdhlh/socimatic-offical-website.git
+   ```
 
-## Deploy on Vercel
+2. **Navigate to the project directory**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd socimatic-offical-website
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+   After running, open [http://localhost:3000](http://localhost:3000) to view the website.
+
+## Project Structure
+
+- `src/`: Contains the main source code and components.
+- `public/`: Holds static assets like images and fonts.
+- `pages/`: Next.js page components.
+- `components/`: Reusable React components.
+
+## Contribution Guidelines
+
+We welcome issues, feature requests, and pull requests. Please ensure you read and adhere to our contribution guidelines before contributing.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For any questions or suggestions, please reach out via [GitHub Issues](https://github.com/sszdhlh/socimatic-offical-website/issues). 

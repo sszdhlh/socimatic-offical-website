@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
+import { API_BASE_URL } from "@/lib/constants";
 
 const signInSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
@@ -35,11 +36,27 @@ export default function SignInPage() {
   async function onSubmit(data: SignInValues) {
     setIsLoading(true);
     try {
-      const result = await signIn("credentials", {
-        redirect: false,
-        email: data.email,
-        password: data.password,
+      const response = await fetch(`${API_BASE_URL}/api/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        toast.error(result.message || "Invalid email or password");
+        return;
+      }
+      
+      toast.success("Signed in successfully!");
+      
+      // Save token (for demo purposes, localStorage)
+      localStorage.setItem("token", result.token);
+      
+      // Redirect to dashboard
+      router.push("/dashboard");
+      
 
       if (result?.error) {
         toast.error("Invalid email or password");

@@ -11,6 +11,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
+import { API_BASE_URL } from "@/lib/constants";
+
 
 const signUpSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -43,7 +45,25 @@ export default function SignUpPage() {
     try {
       // This is where you would normally connect to your API
       // Since we're using a mock auth system, we'll just simulate a successful signup
-      console.log("Sign up data:", data);
+      const response = await fetch(`${API_BASE_URL}/api/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          password: data.password
+        }),
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        toast.error(result.message || "Registration failed");
+        return;
+      }
+      
+      toast.success("Account created successfully!");
+      router.push("/signin");
 
       // Simulate API delay
       await new Promise(resolve => setTimeout(resolve, 1000));

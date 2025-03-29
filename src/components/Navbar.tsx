@@ -79,7 +79,7 @@ export function Navbar() {
                 </Link>
                 <div className="flex flex-col gap-2 mt-4">
                   <Button asChild variant="outline">
-                    <Link href="/login">Sign in</Link>
+                    <Link href="/signin">Sign in</Link>
                   </Button>
                   <Button asChild className="rounded-button">
                     <Link href="/request-demo">Request Demo</Link>
